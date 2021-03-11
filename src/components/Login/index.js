@@ -17,10 +17,18 @@ class Login extends Component{
 
 
     }
+
+    componentDidMount(){
+        //Verificar se tem algum usuário logado
+        if(firebase.getCurrent()){
+            return this.props.history.replace('dashboard');
+        }
+    }
     
     entrar(e){
-        alert('entrou');
         e.preventDefault();
+        
+        this.login();
     }
 
     login = async () => {
@@ -28,6 +36,9 @@ class Login extends Component{
         
         try{
             await firebase.login(email, password)
+            .then( (result) => {
+                alert('Usuario logado com sucesso');    
+            })
             .catch( (error) => {
                 if(error.code === 'auth/user-not-found'){
                     alert("Este usuário não existe");
@@ -36,6 +47,7 @@ class Login extends Component{
                 }
                 return null;
             });
+            this.props.history.replace('/dashboard');
         }catch(error){
             alert(error.message);
         }
