@@ -1,10 +1,10 @@
-div .login-h1{
+div .register-h1{
     margin-top: 30px;
     margin-bottom: 5px;
     text-align: center;    
 }
 
-form#login{
+form#register{
     width: 100%;
     max-width: 680px;
     margin: 30px auto 0;
@@ -15,7 +15,7 @@ form#login{
     flex-direction: column;
 }
 
-form#login input{
+form#register input{
     margin-bottom: 15px;
     height: 40px;
     border-radius: 4px;
@@ -24,7 +24,7 @@ form#login input{
     font-size: 14px;
 }
 
-form#login button{
+form#register button{
     padding: 10px 20px;
     border-radius: 4px;
     background-color: #272727;
@@ -35,12 +35,12 @@ form#login button{
     border: 0px;
 }
 
-form#login button:hover{
+form#register button:hover{
     background-color: #353535;
     color: #DDD;
 }
 
-form#login a{
+form#register a{
     text-align: center;
     text-decoration: none;
     color: #272727;
