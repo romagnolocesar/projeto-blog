@@ -28,12 +28,11 @@ class Register extends Component{
             const {nome, email, password} = this.state;
             await firebase.register(nome, email, password)
             .then( (result) => {
-                alert('Usuario cadastrado com sucesso');
                 this.props.history.replace('/dashboard');
             }); 
 
         }catch(error){
-            alert(`Erro: ${error.message}`);
+            console.log(`Erro: ${error.message}`);
         }
     }
 

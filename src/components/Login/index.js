@@ -37,7 +37,7 @@ class Login extends Component{
         try{
             await firebase.login(email, password)
             .then( (result) => {
-                alert('Usuario logado com sucesso');    
+                // alert('Usuario logado com sucesso');    
             })
             .catch( (error) => {
                 if(error.code === 'auth/user-not-found'){
