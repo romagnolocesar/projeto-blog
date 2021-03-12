@@ -50,6 +50,22 @@ form#new-post span{
     font-size: 15px;
 }
 
+form#new-post label{
+    margin-bottom: 15px;
+}
+
+form#new-post img{
+    width: 200px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+form#new-post progress{
+    margin-bottom: 15px;
+}
+
+
+
 form#new-post textarea{
     height: 80px;
     border-radius: 5px;
