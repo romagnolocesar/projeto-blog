@@ -44,6 +44,12 @@ form#new-post input[type=text]{
     padding: 0 20px;
 }
 
+form#new-post span{
+    text-align: center;
+    color: brown;
+    font-size: 15px;
+}
+
 form#new-post textarea{
     height: 80px;
     border-radius: 5px;

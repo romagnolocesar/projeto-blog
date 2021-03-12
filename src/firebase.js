@@ -19,6 +19,7 @@ class Firebase{
             app.initializeApp(firebaseConfig);
         }
 
+        //Referenciando a database para acessar em outros locais
         this.app = app.database();
    } 
 
@@ -57,6 +58,24 @@ class Firebase{
         await app.database().ref('usuarios').child(uid)
         .once('value')
         .then(callback);
+    }
+
+    newPost(autor, descricao, imagem, titulo){
+        let posts = app.database().ref('posts');
+        let key = posts.push().key;
+
+       posts.child(key).set({
+            autor: autor,
+            descricao: descricao,
+            imagem: imagem,
+            titulo: titulo ,         
+        })
+        .then( (result) => {
+            return result;
+        })
+        .catch((error) => {
+            alert(error.message);
+        });
     }
     
 }

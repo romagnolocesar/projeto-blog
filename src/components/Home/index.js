@@ -21,6 +21,8 @@ class Home extends Component{
                     autor: childItem.val().autor
                 });
             });
+            //Colocando o ultimo post no topo
+            state.posts.reverse();
             this.setState(state);
         })
     }
